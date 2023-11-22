@@ -1,15 +1,17 @@
-import React from 'react';
-import './Footer.scss';
-import logo from '../../images/logo.svg';
-import Navigation from '../Navigation/Navigation';
+import React from "react";
+import "./Footer.scss";
+import logo from "../../images/logo.svg";
+import Navigation from "../Navigation/Navigation";
+import { useTranslation } from "react-i18next";
 
 interface IProps {
   onClickPolicy: (evt: React.MouseEvent) => void;
 }
 
 const Footer: React.FC<IProps> = ({ onClickPolicy }) => {
-  const classNav = 'footer__nav';
-  const classLink = 'link footer__nav-link';
+  const { t } = useTranslation();
+  const classNav = "footer__nav";
+  const classLink = "link footer__nav-link";
   return (
     <footer className="footer">
       <a href="/" className="footer__logo-link">
@@ -17,9 +19,14 @@ const Footer: React.FC<IProps> = ({ onClickPolicy }) => {
       </a>
       <Navigation classNameNav={classNav} classNameLink={classLink} />
       <p className="footer__copyright">
-        {new Date().getFullYear()} |{' '}
-        <a rel="nofollow" onClick={onClickPolicy} className="footer__copyright-link" href="/">
-          Политика конфиденциальности персональных данных
+        {new Date().getFullYear()} |{" "}
+        <a
+          rel="nofollow"
+          onClick={onClickPolicy}
+          className="footer__copyright-link"
+          href="/"
+        >
+          {t("policy.title")}
         </a>
       </p>
     </footer>

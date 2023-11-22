@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import './Popup.scss';
 import { KEYBOARD_KEYS } from '../../utils/constants';
+import './Popup.scss';
 
 type TProps = {
   title?: string;
