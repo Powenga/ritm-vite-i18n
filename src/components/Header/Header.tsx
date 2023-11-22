@@ -49,13 +49,15 @@ const Header: React.FC = () => {
       </a>
       <LangSwitcher />
       <h1 className="header__title">
-        <Trans i18nKey="header.intro">
-          <span className="header__title-span">
-            Разрабатываем и внедряем веб приложения
-          </span>
-          , которые помогают оптимизировать бизнес-процессы и решить сложные
-          управленческие задачи
-        </Trans>
+        <div>
+          <Trans i18nKey="header.intro">
+            <span className="header__title-span">
+              Разрабатываем и внедряем веб приложения
+            </span>
+            , которые помогают оптимизировать бизнес-процессы и решить сложные
+            управленческие задачи
+          </Trans>
+        </div>
       </h1>
       <Line lineSVG={HeaderLine2} classLineSVG="header__line2" />
     </header>
