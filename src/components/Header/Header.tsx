@@ -30,7 +30,7 @@ const Header: React.FC = () => {
     <header id="header" className="header">
       <Line lineSVG={HeaderLine1} classLineSVG="header__line1" />
       <a href="/" className="header__logo-link">
-        <img src={logo} className="header__logo" alt="Логотип" />
+        <img src={logo} className="header__logo" alt={t('header.logoAlt')} />
       </a>
       <button
         type="button"
