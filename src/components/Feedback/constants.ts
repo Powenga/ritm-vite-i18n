@@ -5,9 +5,6 @@ export const INPUT_NAME_ATTRIBUTES = {
   maxLength: 40,
   required: true
 };
-export const INPUT_MOBILE_ATTRIBUTES = {
-  required: true
-};
 
 export const INPUT_EMAIL_ATTRIBUTES = {
   pattern: PATTERN_EMAIL,

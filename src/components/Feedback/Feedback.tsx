@@ -1,20 +1,18 @@
-import React, { KeyboardEvent, SyntheticEvent, useRef } from 'react';
-import { PatternFormat } from 'react-number-format';
-import useForm from '../../utils/hooks/useForm';
-import Input from '../Inputs/Input/Input';
-import TextArea from '../Inputs/TextArea/TextArea';
-import Line from '../Line/Line';
-import  FeedbackLine  from '../../images/feedback-line.svg?react';
-
-import './Feedback.scss';
+import React, { KeyboardEvent, SyntheticEvent, useRef } from "react";
+import useForm from "../../utils/hooks/useForm";
+import Input from "../Inputs/Input/Input";
+import TextArea from "../Inputs/TextArea/TextArea";
+import Line from "../Line/Line";
+import FeedbackLine from "../../images/feedback-line.svg?react";
 import {
   INPUT_EMAIL_ATTRIBUTES,
-  INPUT_MOBILE_ATTRIBUTES,
   INPUT_NAME_ATTRIBUTES,
-  InputNames
-} from './constants';
-import { TDataFeedback } from '../../@types/types';
-import { ENTER_KEY, SPACE_KEY } from '../../utils/constants';
+  InputNames,
+} from "./constants";
+import { TDataFeedback } from "../../@types/types";
+import { ENTER_KEY, SPACE_KEY } from "../../utils/constants";
+import "./Feedback.scss";
+import { Trans, useTranslation } from "react-i18next";
 
 type PropTypes = {
   onSubmit: (dataForm: TDataFeedback) => void;
@@ -22,24 +20,28 @@ type PropTypes = {
   onPolicyClick: (event: SyntheticEvent) => void;
 };
 
-const Feedback: React.FC<PropTypes> = ({ onSubmit, isPreloaderEnabled, onPolicyClick }) => {
+const Feedback: React.FC<PropTypes> = ({
+  onSubmit,
+  isPreloaderEnabled,
+  onPolicyClick,
+}) => {
+  const { t } = useTranslation();
   const formRef = useRef(null);
   const form = useForm(formRef);
-
   const preloader = isPreloaderEnabled && (
-    <span className="feedback__form__preloader">Запрос отправляется...</span>
+    <span className="feedback__form__preloader">{t("feedback.preloader")}</span>
   );
   const handleSubmit = (evt: React.FormEvent): void => {
     evt.preventDefault();
 
     const dataForm: TDataFeedback = {
       policy: false,
-      userEmail: '',
-      userMessage: '',
-      userName: '',
-      userPhone: '',
+      userEmail: "",
+      userMessage: "",
+      userName: "",
+      userPhone: "",
       ...form.values,
-      ...form.checkboxValues
+      ...form.checkboxValues,
     };
 
     onSubmit(dataForm);
@@ -58,38 +60,30 @@ const Feedback: React.FC<PropTypes> = ({ onSubmit, isPreloaderEnabled, onPolicyC
     <section id="feedback" className="section feedback">
       <div className="section__wrapper feedback__wrapper">
         <Line lineSVG={FeedbackLine} classLineSVG="feedback__line" />
-        <h2 className="section__title">Форма обратной связи</h2>
-        <h3 className="section__subtitle feedback__subtitle">Получить консультацию</h3>
-        <p className="feedback__description">
-          Если вы хотите больше узнать о нас, наших технологиях и опыте работы, обсудить конкретную
-          задачу или просто получить консультацию, напишите нам через форму обратной связи
-        </p>
-        <form noValidate ref={formRef} className="feedback__form" onSubmit={handleSubmit}>
+        <h2 className="section__title">{t("feedback.title")}</h2>
+        <h3 className="section__subtitle feedback__subtitle">
+          {t("feedback.subtitle")}
+        </h3>
+        <p className="feedback__description">{t("feedback.text")}</p>
+        <form
+          noValidate
+          ref={formRef}
+          className="feedback__form"
+          onSubmit={handleSubmit}
+        >
           <Input
             name={InputNames.USER_NAME}
-            value={form.values[InputNames.USER_NAME] || ''}
-            placeholderText="Имя"
+            value={form.values[InputNames.USER_NAME] || ""}
+            placeholderText={t("feedback.inputs.name")}
             typeInput="text"
             errors={form.errors}
             validateAttributes={INPUT_NAME_ATTRIBUTES}
             onChange={form.handleChange}
           />
-          <PatternFormat
-            format="+7 (###) ###-##-##"
-            mask="_"
-            value={form.values[InputNames.USER_PHONE] || ''}
-            customInput={Input}
-            onChange={form.handleChange}
-            placeholderText="Телефон"
-            errors={form.errors}
-            validateAttributes={INPUT_MOBILE_ATTRIBUTES}
-            name={InputNames.USER_PHONE}
-            typeInput="tel"
-          />
           <Input
             name={InputNames.USER_EMAIL}
-            value={form.values[InputNames.USER_EMAIL] || ''}
-            placeholderText="Email"
+            value={form.values[InputNames.USER_EMAIL] || ""}
+            placeholderText={t("feedback.inputs.email")}
             typeInput="email"
             errors={form.errors}
             validateAttributes={INPUT_EMAIL_ATTRIBUTES}
@@ -97,12 +91,15 @@ const Feedback: React.FC<PropTypes> = ({ onSubmit, isPreloaderEnabled, onPolicyC
           />
           <TextArea
             name={InputNames.USER_MESSAGE}
-            value={form.values[InputNames.USER_MESSAGE] || ''}
-            placeholderText="Сообщение"
+            value={form.values[InputNames.USER_MESSAGE] || ""}
+            placeholderText={t("feedback.inputs.message")}
             errors={form.errors}
             onChange={form.handleChange}
           />
-          <label htmlFor={InputNames.POLICY} className="feedback__form__checkbox">
+          <label
+            htmlFor={InputNames.POLICY}
+            className="feedback__form__checkbox"
+          >
             <input
               id={InputNames.POLICY}
               name={InputNames.POLICY}
@@ -113,16 +110,18 @@ const Feedback: React.FC<PropTypes> = ({ onSubmit, isPreloaderEnabled, onPolicyC
               required
             />
             <span className="feedback__form__checkbox-text">
-              Нажимая на кнопку, вы даете согласие на обработку{' '}
-              <span
-                onClick={onPolicyClick}
-                onKeyDown={handlePolicyKeydown}
-                tabIndex={0}
-                role="button"
-                className="feedback__form__checkbox-policy"
-              >
-                персональных данных.
-              </span>
+              <Trans i18nKey="feedback.inputs.policy">
+                Нажимая на кнопку, вы даете согласие на обработку{" "}
+                <span
+                  onClick={onPolicyClick}
+                  onKeyDown={handlePolicyKeydown}
+                  tabIndex={0}
+                  role="button"
+                  className="feedback__form__checkbox-policy"
+                >
+                  персональных данных.
+                </span>
+              </Trans>
             </span>
           </label>
           {preloader}
@@ -132,7 +131,7 @@ const Feedback: React.FC<PropTypes> = ({ onSubmit, isPreloaderEnabled, onPolicyC
               type="submit"
               disabled={!form.isValid}
             >
-              Отправить вопрос
+              {t("feedback.inputs.submit")}
             </button>
           )}
         </form>
