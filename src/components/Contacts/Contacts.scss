@@ -1,0 +1,87 @@
+@import '../../styles/_variables.scss';
+
+@keyframes contact-line {
+  100% {stroke-dasharray:3500,0;}
+}
+
+// класс для svg-линии
+.contact-line-svg {
+  stroke-dasharray:0,3500;
+  animation: contact-line 5s linear forwards 0s;
+}
+
+.contacts {
+  margin-bottom: 43px;
+
+  @media screen and (min-width: $PAD){
+    margin-bottom: 80px;
+  }
+
+  @media screen and (min-width: $DESKTOP){
+    margin-bottom: 214px;
+  }
+
+  &__wrapper {
+    @media screen and (min-width: $DESKTOP){
+      position: relative;
+      padding: 0 86px;
+    }
+  }
+
+  &__line {
+    top: 18px;
+    left: -86px;
+  }
+
+  &__subtitle {
+    margin: 0 0 26px;
+
+    @media screen and (min-width: $PAD){
+      margin: 0 0 32px;
+      @include font_text(40px, 1.35, $WHITE, 500);
+    }
+
+    @media screen and (min-width: $DESKTOP){
+      margin: 0 0 60px;
+    }
+  }
+
+  &__list {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    @media screen and (min-width: $DESKTOP_MIN){
+    }
+  }
+
+  &__item {
+    margin: 0;
+    display: flex;
+    @include font_text(18px, 1.33, $WHITE);
+    text-align: left;
+    text-decoration: none;
+
+    @media screen and (min-width: $PAD){
+      font-size: 24px;
+    }
+
+    &-icon {
+      width: 36px;
+      &_type_mobile {
+        background-image: url("../../images/icon-phone.svg");
+        background-repeat: no-repeat;
+        background-size: 22.2px 22.2px;
+        background-position: 0 center;
+      }
+
+      &_type_email {
+        background-image: url("../../images/icon-mail.svg");
+        background-repeat: no-repeat;
+        background-size: 21.5px 15.5px;
+        background-position: 0 center;
+      }
+    }
+  }
+}

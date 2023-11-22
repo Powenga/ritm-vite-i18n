@@ -1,0 +1,17 @@
+@import '../../styles/_variables.scss';
+
+.line-wrapper {
+  position: relative;
+  width: 0;
+  height: 0
+}
+
+.line-element {
+  display: none;
+
+  @media screen and (min-width: $DESKTOP){
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+}

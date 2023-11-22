@@ -1,0 +1,87 @@
+@import '../../../styles/_variables.scss';
+
+.tools {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 33px;
+  background-color: $BLACK_BLUE;
+
+  @media screen and (min-width: $PAD){
+    margin-top: 80px;
+  }
+
+  @media screen and (min-width: $DESKTOP){
+    margin-top: 160px;
+  }
+
+  &__list {
+    width: 100%;
+    padding: 0 18px;
+    min-height: 126px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    @media screen and (min-width: $PAD){
+      min-height: 200px;
+      padding: 56px 0;
+      column-gap: 50px;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: $DESKTOP){
+      width: $DESKTOP;
+      padding: 56px 0 55px;
+      column-gap: 160px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-image {
+      &_type_react {
+        width: 38px;
+        height: 42px;
+
+        @media screen and (min-width: $PAD){
+          width: 73px;
+          height: 81px;
+        }
+      }
+
+      &_type_nodejs {
+        width: 85px;
+        height: 25px;
+
+        @media screen and (min-width: $PAD){
+          width: 165px;
+          height: 49px;
+        }
+      }
+
+      &_type_nest {
+        width: 40px;
+        height: 40px;
+
+        @media screen and (min-width: $PAD){
+          width: 77px;
+          height: 77px;
+        }
+      }
+
+      &_type_nginx {
+        width: 75px;
+        height: 16px;
+
+        @media screen and (min-width: $PAD){
+          width: 147px;
+          height: 31px;
+        }
+      }
+    }
+  }
+}

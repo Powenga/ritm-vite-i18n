@@ -1,0 +1,43 @@
+@import '../../styles/_variables.scss';
+
+@keyframes tech-line {
+  100% {stroke-dasharray:1500,0;}
+}
+
+// класс для svg-линии
+.tech-line1-svg {
+  stroke-dasharray:0,1500;
+  animation: tech-line 3s linear forwards 0s;
+}
+
+// класс для svg-линии
+.tech-line2-svg {
+  stroke-dasharray:0,1500;
+  animation: header-line 3s linear forwards 0s;
+}
+
+.techs {
+  position: relative;
+  padding: 0 18px;
+  margin-top: 80px;
+
+  @media screen and (min-width: $PAD){
+    padding: 0 46px;
+    margin-top: 220px;
+  }
+
+  @media screen and (min-width: $DESKTOP){
+    max-width: $DESKTOP;
+    padding: 0 84px;
+    margin-top: 160px;
+  }
+
+  &__line-wrapper2 {
+    align-self: flex-start;
+  }
+
+  &__line2 {
+    bottom: -183px;
+    left: 148px;
+  }
+}

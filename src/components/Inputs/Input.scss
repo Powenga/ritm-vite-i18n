@@ -1,0 +1,76 @@
+@import "../../styles/_variables.scss";
+
+.input {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 56px;
+  padding: 0 18px;
+  flex-direction: column;
+  justify-content: center;
+
+  @include font_text(18px, 1.33, $WHITE_INPUT);
+  text-align: left;
+
+  border: 1px solid $GRAY_TEXT;
+  border-radius: 14px;
+  background-color: transparent;
+
+  &:hover {
+    border-color: $BLUE;
+  }
+
+  &_type_textarea {
+    padding: 15px 18px;
+    justify-content: flex-start;
+  }
+
+  &__element {
+    padding: 0;
+    order: 1;
+    color: $WHITE_INPUT;
+    outline: none;
+    border: none;
+    resize: none;
+    background-color: transparent;
+    transition: .3s;
+
+    &_type_textarea {
+      flex: 1;
+    }
+  }
+
+
+  &__placeholder {
+    visibility: hidden;
+    font-size: 0;
+    transition: .3s;
+  }
+
+  &__element:focus::placeholder {
+    color: transparent;
+    transition: .3s;
+  }
+
+  &__element:focus + &__placeholder {
+    display: block;
+    visibility: visible;
+    padding-bottom: 2px;
+    font-size: 8px;
+    line-height: 1.25;
+    color: $BLUE;
+    transition: .3s;
+  }
+
+  &__error {
+    width: 100%;
+    height: 22px;
+    position: absolute;
+    padding: 0 5px 0 18px;
+    bottom: -24px;
+    left: 0;
+    font-size: 10px;
+    line-height: 1.2;
+    color: $RED;
+  }
+}

@@ -1,0 +1,103 @@
+@import '../../styles/_variables.scss';
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 18px 18px;
+
+  @media screen and (min-width: $PAD){
+    padding: 25px 47px 14px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: $DESKTOP){
+    max-width: $DESKTOP;
+    padding: 75px 87px 12px;
+  }
+
+  &__logo-link {
+    display: flex;
+    width: 100%;
+    justify-items: start;
+    margin-bottom: 42px;
+
+    @media screen and (min-width: $DESKTOP){
+      width: auto;
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    width: 111px;
+    height: 24px;
+  }
+
+  &__nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 34px;
+
+    @media screen and (min-width: $PAD){
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      column-gap: 18px;
+    }
+
+    @media screen and (min-width: $DESKTOP){
+      width: auto;
+      margin-left: 250px;
+      justify-content: flex-start;
+      column-gap: 40px;
+      row-gap: 0;
+      flex: 2;
+    }
+
+    &-link {
+      color: $GRAY_DARK;
+      font-weight: 400;
+      text-align: center;
+      text-decoration: none;
+    }
+
+  }
+
+  &__copyright {
+    width: 100%;
+    margin-top: 75px;
+    margin-bottom: 0;
+    @include font_text(16px, 1.12, $GRAY_DARK);
+    text-align: center;
+
+    @media screen and (min-width: $PAD){
+      margin-top: 34px;
+    }
+
+    @media screen and (min-width: $DESKTOP){
+      margin-top: 49px;
+      font-size: 18px;
+      line-height: 1.11;
+    }
+
+    &-link {
+      &:hover, &_active {
+        color: $WHITE;
+        transition: 2s;
+      }
+      @include font_text(16px, 1.12, $GRAY_DARK);
+
+      @media screen and (min-width: $DESKTOP){
+        font-size: 18px;
+        line-height: 1.11;
+      }
+    }
+  }
+}

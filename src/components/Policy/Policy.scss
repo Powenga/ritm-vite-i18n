@@ -1,0 +1,79 @@
+@import "../../styles/_variables.scss";
+
+.scroll {
+  @media screen and (min-width: $DESKTOP_MIN){
+    &::-webkit-scrollbar {
+      margin-left: 2px;
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $GRAY_LINE;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $BLACK;
+      border: 0.25em solid $WHITE;
+      border-radius: 100vw;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: black;
+    }
+  }
+}
+
+
+.policy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: auto;
+
+  @media screen and (min-width: $DESKTOP_MIN){
+    padding: 0 10px;
+  }
+
+  &__title {
+    @include font_text(18px, 1.33, $WHITE, 500);
+    text-align: left;
+    margin: 0 0 15px;
+  }
+
+  &__item {
+    text-align: left;
+
+    &-title {
+      @include font_text(16px, 1.38, $WHITE_TITLE, 500);
+      text-align: left;
+      margin: 10px 0 10px;
+    }
+
+    &-subtitle {
+      @include font_text(16px, 1.38, $GRAY_TEXT, 500);
+      text-align: left;
+      margin: 0 0 10px;
+    }
+
+    &-text {
+      @include font_text(16px, 1.38, $GRAY_TEXT);
+      text-align: left;
+      margin: 0 0 8px;
+    }
+  }
+
+  &__table {
+    border: 1px solid $WHITE;
+    border-collapse: collapse;
+    @include font_text(16px, 1.2, $GRAY_TEXT);
+    text-align: left;
+    margin-bottom: 8px;
+
+    &-cell {
+      padding: 5px;
+      border: 1px solid $WHITE;
+      vertical-align: top;
+      white-space: pre-line;
+    }
+  }
+}

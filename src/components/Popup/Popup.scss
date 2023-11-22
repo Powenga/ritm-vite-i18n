@@ -1,0 +1,116 @@
+@import '../../styles/variables';
+@keyframes opacityAnimation {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 15px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: rgba(25, 66, 116, .69);
+  opacity: 0;
+  animation: opacityAnimation .5s forwards;
+
+  @media screen and (min-width: $PAD) {
+    padding: 0;
+  }
+
+  &__container {
+    width: 100%;
+    max-height: 80vh;
+    //padding: 115px 48px;
+    padding: 48px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: $BLACK;
+
+    @media screen and (min-width: $PAD) {
+      width: 676px;
+      //padding: 104px 176px;
+      padding: 104px;
+    }
+
+    @media screen and (min-width: $DESKTOP) {
+      width: 1052px;
+      //padding: 120px 257px;
+      padding: 120px;
+    }
+  }
+
+  &__button-close {
+    width: 18px;
+    height: 18px;
+    margin: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../images/icon-cross.svg);
+    transition: opacity .6s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    @media screen and (min-width: $PAD) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 18px;
+    max-width: 247px;
+    @include font_text(24px, 1.33, $WHITE, 500);
+    letter-spacing: -0.01em;
+
+    @media screen and (min-width: $PAD) {
+      max-width: 323px;
+      margin: 0 0 24px;
+      font-size: 32px;
+      line-height: 1.25;
+    }
+
+    @media screen and (min-width: $DESKTOP) {
+      max-width: 537px;
+      margin: 0 0 40px;
+      font-size: 40px;
+      line-height: 1.35;
+    }
+  }
+
+  &__message {
+    margin: 0;
+    max-width: 247px;
+    @include font_text(14px, 1.43, $GRAY_TEXT);
+
+    @media screen and (min-width: $PAD) {
+      max-width: 323px;
+      font-size: 18px;
+      line-height: 1.33;
+    }
+
+    @media screen and (min-width: $DESKTOP) {
+      max-width: 537px;
+      font-size: 24px;
+      line-height: 1.33;
+    }
+  }
+}

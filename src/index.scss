@@ -1,0 +1,57 @@
+@import './vendor/normalize.css';
+@import './vendor/fonts/font.css';
+@import './styles/_variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Onest', Arial, sans-serif;
+  font-style: normal;
+  color: $WHITE;
+  background-color: $BLACK;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.link {
+  @include font_text(18px, 1.33, $GRAY_NAV, 500);
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover, &_active {
+    color: $WHITE;
+    transition: 2s;
+  }
+
+  &_disabled {
+    color: $GRAY_DISABLE;
+    cursor: auto;
+  }
+}
+
+.button {
+  padding: 16px 40px;
+  @include font_text(18px, 1.33, $WHITE, 500);
+  text-decoration: none;
+  background-color: $BLUE;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+
+  &:hover, &_active {
+    background-color: $BLUE_ACTIVE;
+    transition: 2s;
+  }
+
+  &:disabled, &_disabled {
+    background-color: $GRAY_DISABLE;
+    color: $GRAY_DARK;
+    cursor: auto;
+  }
+}

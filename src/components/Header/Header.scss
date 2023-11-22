@@ -1,0 +1,232 @@
+@import '../../styles/_variables.scss';
+
+@mixin menu-icon($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: $height;
+  width: $width;
+  border-radius: 5px;
+  top: $top;
+  left: 0;
+  background-color: $WHITE;
+}
+
+@mixin menu-icon-before($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $WHITE;
+  border-radius: 5px;
+  content: '';
+  top: $top;
+  left: 0;
+}
+
+@mixin menu-icon-after($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $WHITE;
+  border-radius: 5px;
+  content: '';
+  top: $top;
+  left: 0;
+}
+
+@keyframes header-line {
+  100% {
+    stroke-dasharray: 1500, 0;
+  }
+}
+
+// класс для svg-линии
+.header-line1-svg {
+  stroke-dasharray: 0, 1500;
+  animation: header-line 3s linear forwards 0s;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 19px 19px 0;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $PAD) {
+    padding: 26px 45px 0;
+  }
+
+  @media screen and (min-width: $DESKTOP_MIN) {
+    padding: 24px 87px;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: $DESKTOP) {
+    max-width: $DESKTOP;
+  }
+
+  &__line1 {
+    top: -16px;
+    left: -87px;
+  }
+
+  &__line2 {
+    bottom: -208px;
+    left: 56px;
+
+    & path {
+      stroke-dasharray: 0, 1500;
+      animation: header-line 3s linear forwards 2.6s;
+    }
+  }
+
+  &__logo-link {
+    z-index: 1;
+    display: flex;
+    flex: 1;
+
+    @media screen and (min-width: $DESKTOP_MIN) {
+      flex: 0;
+      z-index: 0;
+    }
+  }
+
+  &__logo {
+    width: 111px;
+    height: 24px;
+  }
+
+  &__button-menu {
+    position: relative;
+    width: 28px;
+    height: 16px;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+
+    @media screen and (min-width: $PAD) {
+      width: 34px;
+    }
+
+    &-icon {
+      @include menu-icon(3px, 24px, 6px);
+
+      &:before {
+        @include menu-icon-before(3px, 24px, -7px);
+      }
+
+      &:after {
+        @include menu-icon-after(3px, 24px, 7px);
+      }
+    }
+
+    &_opened &-icon {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &:before {
+        transform: rotateZ(45deg) scaleX(1) translate(5px, 6px);
+      }
+
+      &:after {
+        transform: rotateZ(-45deg) scaleX(1) translate(4px, -5px);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (min-width: $DESKTOP_MIN) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @media screen and (max-width: $DESKTOP_MIN_WITHOUT) {
+      &_opened {
+        position: absolute;
+        width: 100%;
+        min-height: 100vh;
+        top: 0;
+        left: 0;
+        padding-top: 108px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 56px;
+        background-color: $BLACK;
+      }
+    }
+
+    @media screen and (min-width: $PAD) and (max-width: $DESKTOP_MIN_WITHOUT) {
+      &_opened {
+        padding-top: 128px;
+      }
+    }
+
+    @media screen and (min-width: $DESKTOP_MIN) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
+    &-link {
+      margin-left: 18px;
+
+      @media screen and (min-width: $PAD) {
+        margin-left: 46px;
+      }
+
+      @media screen and (min-width: $DESKTOP_MIN) {
+        margin-left: 24px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__button-link {
+    margin: 0;
+    order: 2;
+
+    @media screen and (min-width: $DESKTOP_MIN) {
+      order: 0;
+      margin-left: 32px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    margin: 58px 0 60px;
+    @include font_text(32px, 1.25, $WHITE, 500);
+    text-align: center;
+    letter-spacing: -0.01em;
+    background-color: $BLACK;
+
+    @media screen and (min-width: $PAD) {
+      margin: 183px 0 60px;
+      font-size: 48px;
+      line-height: 1.17;
+    }
+
+    @media screen and (min-width: $DESKTOP_MIN) {
+      min-height: 350px;
+      margin: 140px 65px 65px;
+      font-size: 60px;
+      line-height: 1.17;
+    }
+  }
+
+  &__title-span {
+    color: $BLUE;
+  }
+}

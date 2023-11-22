@@ -1,0 +1,199 @@
+@import '../../../styles/_variables.scss';
+
+.stages {
+  width: 100%;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $PAD) {
+    margin-bottom: 160px;
+  }
+
+  @media screen and (min-width: $DESKTOP) {
+    margin-bottom: 160px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $PAD){
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $DESKTOP){
+      max-width: 728px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    row-gap: 32px;
+    align-items: start;
+    list-style-type: none;
+
+    @media screen and (min-width: $PAD){
+      row-gap: 60px;
+    }
+
+    @media screen and (min-width: $DESKTOP){
+      row-gap: 80px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    display: grid;
+
+    @media screen and (min-width: $PAD){
+      grid-template-columns: repeat(2, auto);
+      column-gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media screen and (min-width: $DESKTOP){
+      grid-template-columns: repeat(2, auto);
+      column-gap: 24px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-text-wrap {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: $DESKTOP){
+        padding-top: 20px;
+      }
+    }
+
+    &-title {
+      margin: 0 0 32px;
+      @include font_text(20px, 1.4, $WHITE, 500);
+      text-align: left;
+
+      @media screen and (min-width: $PAD){
+        font-size: 24px;
+        line-height: 1.33;
+      }
+
+      @media screen and (min-width: $DESKTOP){
+
+      }
+    }
+
+    &-description {
+      margin: 0 0 25px;
+      @include font_text(18px, 1.33, $GRAY_TEXT);
+      text-align: left;
+
+      @media screen and (min-width: $PAD){
+
+      }
+
+      @media screen and (min-width: $DESKTOP){
+        font-size: 24px;
+        line-height: 1.33;
+        margin: 0 0 32px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+
+
+    &-image-wrapper {
+      display: none;
+      position: relative;
+
+      @media screen and (min-width: $PAD) {
+        width: 328px;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #05090B;
+        border: 1.65484px solid $BLACK_BLUE;
+        border-radius: 33.0968px;
+      }
+
+      @media screen and (min-width: $DESKTOP) {
+        width: 510px;
+        height: 280px;
+        margin-right: 6px;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 95%;
+        height: 130%;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(102, 132, 254, 0.96) 0%, rgba(102, 132, 254, 0) 100%);
+      }
+    }
+
+    &-image {
+      width: 240px;
+      height: 150px;
+      z-index: 1;
+
+      &_type_first {
+
+        @media screen and (min-width: $PAD) {
+          width: 186px;
+          height: 117px;
+          margin-right: 12px;
+        }
+
+        @media screen and (min-width: $DESKTOP) {
+          width: 290px;
+          height: 182px;
+          margin-right: 12px;
+        }
+      }
+
+      &_type_second {
+        @media screen and (min-width: $PAD) {
+          width: 164px;
+          height: 115px;
+        }
+
+        @media screen and (min-width: $DESKTOP) {
+          width: 255px;
+          height: 179px;
+        }
+      }
+
+      &_type_third {
+        @media screen and (min-width: $PAD) {
+          width: 158px;
+          height: 112px;
+        }
+
+        @media screen and (min-width: $DESKTOP) {
+          width: 245px;
+          height: 174px;
+        }
+      }
+
+      &_type_fourth {
+        @media screen and (min-width: $PAD) {
+          width: 158px;
+          height: 112px;
+        }
+
+        @media screen and (min-width: $DESKTOP) {
+          width: 245px;
+          height: 174px;
+        }
+      }
+    }
+
+  }
+}

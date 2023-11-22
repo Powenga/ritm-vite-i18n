@@ -1,0 +1,54 @@
+@import '../../../styles/_variables.scss';
+
+.web {
+  width: 100%;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $PAD){
+    margin-bottom: 80px;
+  }
+
+  @media screen and (min-width: $DESKTOP){
+    margin-bottom: 160px;
+  }
+
+  &__line {
+    top: -32px;
+    left: 58px;
+  }
+
+  &__title {
+    @media screen and (min-width: $DESKTOP_MIN){
+      max-width: 914px;
+    }
+  }
+
+  &__list {
+
+  }
+
+  &__item-title {
+    margin: 0 0 12px;
+    @include font_text(20px, 1.4, $WHITE_TITLE, 500);
+    text-align: left;
+
+    @media screen and (min-width: $PAD){
+      margin: 0 0 20px;
+      font-size: 32px;
+      line-height: 1.25;
+    }
+  }
+
+  &__item-description {
+    margin: 0;
+    @include font_text(18px, 1.33, $GRAY_TEXT);
+    text-align: left;
+
+    @media screen and (min-width: $PAD){
+      font-size: 24px;
+      line-height: 1.33;
+    }
+  }
+}
