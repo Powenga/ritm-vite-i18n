@@ -1,17 +1,17 @@
-import React from "react";
-import { useMedia } from "react-use";
-import Carousel, { CarouselItem } from "../../Carousel/Carousel";
-import "../../../styles/section.scss";
-import "./Advantage.scss";
-import { PAD_WIDTH_WITHOUT } from "../../../utils/constants";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { useMedia } from 'react-use';
+import Carousel, { CarouselItem } from '../../Carousel/Carousel';
+import '../../../styles/section.scss';
+import './Advantage.scss';
+import { PAD_WIDTH_WITHOUT } from '../../../utils/constants';
+import { useTranslation } from 'react-i18next';
 
 const QUERY_MEDIA_MOBILE = `(max-width: ${PAD_WIDTH_WITHOUT}px)`;
 
 const Advantage: React.FC = () => {
   const { t } = useTranslation();
   const isMobile = useMedia(QUERY_MEDIA_MOBILE);
-  const advantageItems = t("tech.advantages", { returnObjects: true }).map(
+  const advantageItems = t('tech.advantages', { returnObjects: true }).map(
     (item, index) => {
       const advantageKey = `advantage${index}`;
       return (
@@ -32,7 +32,7 @@ const Advantage: React.FC = () => {
     <ul className="section__list advantage__list">{advantageItems}</ul>
   );
 
-  const carouselItems = t("tech.advantages", { returnObjects: true }).map(
+  const carouselItems = t('tech.advantages', { returnObjects: true }).map(
     (item, index) => {
       const carouselKey = `carousel${index}`;
       return (

@@ -17,7 +17,7 @@ type PropTypes = {
 const Main: React.FC<PropTypes> = ({
   onSubmitFeedback,
   isPreloaderFeedbackEnabled,
-  onPolicyClick
+  onPolicyClick,
 }) => {
   return (
     <main className="main">

@@ -20,7 +20,7 @@ const Input: React.FC<PropTypes> = ({
   errors,
   onChange,
 
-  validateAttributes
+  validateAttributes,
 }) => {
   return (
     <label htmlFor={name} className="input">

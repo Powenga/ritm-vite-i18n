@@ -1,13 +1,13 @@
-import React from "react";
-import Line from "../../Line/Line";
-import BusinessLine from "../../../images/business-line.svg?react";
+import React from 'react';
+import Line from '../../Line/Line';
+import BusinessLine from '../../../images/business-line.svg?react';
 
-import "./Business.scss";
-import { useTranslation } from "react-i18next";
+import './Business.scss';
+import { useTranslation } from 'react-i18next';
 
 const Business: React.FC = () => {
   const { t } = useTranslation();
-  const businessItems = t("dev.business.list", { returnObjects: true }).map(
+  const businessItems = t('dev.business.list', { returnObjects: true }).map(
     (item, index) => {
       const businessKey = `business${index}`;
       return (
@@ -27,7 +27,7 @@ const Business: React.FC = () => {
     <div className="business">
       <Line lineSVG={BusinessLine} classLineSVG="business__line" />
       <h3 className="section__subtitle business__title">
-        {t("dev.business.title")}
+        {t('dev.business.title')}
       </h3>
       {businessListElement}
     </div>

@@ -1,11 +1,11 @@
-import React from "react";
-import "../../../styles/section.scss";
-import "./Stages.scss";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import '../../../styles/section.scss';
+import './Stages.scss';
+import { useTranslation } from 'react-i18next';
 
 const Stages: React.FC = () => {
   const { t } = useTranslation();
-  const stageItems = t("dev.stages.list", { returnObjects: true }).map(
+  const stageItems = t('dev.stages.list', { returnObjects: true }).map(
     (item, indexItem) => {
       const itemKey = `item${indexItem}`;
       const descriptionElements = item.descriptions.map((text, indexText) => {
@@ -40,7 +40,7 @@ const Stages: React.FC = () => {
   return (
     <div className="stages">
       <h3 className="section__subtitle stages__title">
-        {t("dev.stages.title")}
+        {t('dev.stages.title')}
       </h3>
       {stageListElement}
     </div>

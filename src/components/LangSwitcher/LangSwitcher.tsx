@@ -1,7 +1,7 @@
-import { FC, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { langs } from "../../utils/constants";
-import "./LangSwitcher.scss";
+import { FC, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { langs } from '../../utils/constants';
+import './LangSwitcher.scss';
 
 const LangSwitcher: FC = () => {
   const { i18n } = useTranslation();

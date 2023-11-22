@@ -17,10 +17,11 @@ interface TPopupPropsState {
 
 function App() {
   const [isPopupOpened, setIsPopupOpened] = useState(false);
-  const [isPreloaderFeedbackEnabled, setIsPreloaderFeedbackEnabled] = useState(false);
+  const [isPreloaderFeedbackEnabled, setIsPreloaderFeedbackEnabled] =
+    useState(false);
   const [popupProps, setPopupProps] = useState<TPopupPropsState>({
     title: '',
-    message: ''
+    message: '',
   });
   const closePopup = () => {
     setIsPopupOpened(false);
@@ -36,10 +37,16 @@ function App() {
     try {
       await sendForm(dataForm);
 
-      setPopupProps({ title: MESSAGE_SUCCESS.title, message: MESSAGE_SUCCESS.message });
+      setPopupProps({
+        title: MESSAGE_SUCCESS.title,
+        message: MESSAGE_SUCCESS.message,
+      });
       openPopup();
     } catch (e) {
-      setPopupProps({ title: MESSAGE_ERROR.title, message: MESSAGE_ERROR.message });
+      setPopupProps({
+        title: MESSAGE_ERROR.title,
+        message: MESSAGE_ERROR.message,
+      });
       openPopup();
     } finally {
       setIsPreloaderFeedbackEnabled(false);
@@ -50,7 +57,7 @@ function App() {
     const componentPolicy = <Policy />;
     evt.preventDefault();
     setPopupProps({
-      component: componentPolicy
+      component: componentPolicy,
     });
     openPopup();
   };

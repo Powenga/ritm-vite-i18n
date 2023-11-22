@@ -8,11 +8,17 @@ interface TProps {
   classLineWrapper?: string;
 }
 
-const Line: React.FC<TProps> = ({ lineSVG, classLineSVG = '', classLineWrapper = '' }) => {
+const Line: React.FC<TProps> = ({
+  lineSVG,
+  classLineSVG = '',
+  classLineWrapper = '',
+}) => {
   const LineSVG = lineSVG;
   const lineWrapperRef = useRef(null);
   const line = useLine(lineWrapperRef);
-  const lineElement = line.isEnabled && <LineSVG className={`line-element ${classLineSVG}`} />;
+  const lineElement = line.isEnabled && (
+    <LineSVG className={`line-element ${classLineSVG}`} />
+  );
 
   return (
     <div ref={lineWrapperRef} className={`line-wrapper ${classLineWrapper}`}>

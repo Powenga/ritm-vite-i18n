@@ -1,10 +1,10 @@
-import React from "react";
-import "./Policy.scss";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import './Policy.scss';
+import { useTranslation } from 'react-i18next';
 
 const Policy: React.FC = () => {
   const { t } = useTranslation();
-  const politicElements = t("policy.text", { returnObjects: true }).map(
+  const politicElements = t('policy.text', { returnObjects: true }).map(
     (itemPolitic, indexPolitic) => {
       const numberPolitic = indexPolitic + 1;
       const politicKey = `politicItem${numberPolitic}`;
@@ -58,7 +58,7 @@ const Policy: React.FC = () => {
   );
   return (
     <div className="policy scroll">
-      <h3 className="policy__title">{t("policy.title")}</h3>
+      <h3 className="policy__title">{t('policy.title')}</h3>
       {politicElements}
     </div>
   );

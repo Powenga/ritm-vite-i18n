@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import Line from "../Line/Line";
-import Navigation from "../Navigation/Navigation";
-import logo from "../../images/logo.svg";
-import "./Header.scss";
-import HeaderLine1 from "../../images/header-line1.svg?react";
-import HeaderLine2 from "../../images/header-line2.svg?react";
-import { Trans, useTranslation } from "react-i18next";
-import LangSwitcher from "../LangSwitcher/LangSwitcher";
+import React, { useState } from 'react';
+import Line from '../Line/Line';
+import Navigation from '../Navigation/Navigation';
+import logo from '../../images/logo.svg';
+import './Header.scss';
+import HeaderLine1 from '../../images/header-line1.svg?react';
+import HeaderLine2 from '../../images/header-line2.svg?react';
+import { Trans, useTranslation } from 'react-i18next';
+import LangSwitcher from '../LangSwitcher/LangSwitcher';
 
 const Header: React.FC = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const { t } = useTranslation();
 
   const classButtonMenu = `header__button-menu${
-    isMenuOpened ? " header__button-menu_opened" : ""
+    isMenuOpened ? ' header__button-menu_opened' : ''
   }`;
-  const classNav = `header__nav${isMenuOpened ? " header__nav_opened" : ""}`;
+  const classNav = `header__nav${isMenuOpened ? ' header__nav_opened' : ''}`;
   const classLink = `link header__nav-link`;
 
   const handleOnButtonMenu = () => {
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
         onClick={handleOnNavLink}
       />
       <a href="#feedback" className="button header__button-link">
-        {t("header.button")}
+        {t('header.button')}
       </a>
       <LangSwitcher />
       <h1 className="header__title">
