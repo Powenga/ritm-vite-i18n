@@ -11,7 +11,7 @@ const QUERY_MEDIA_MOBILE = `(max-width: ${PAD_WIDTH_WITHOUT}px)`;
 const Advantage: React.FC = () => {
   const { t } = useTranslation();
   const isMobile = useMedia(QUERY_MEDIA_MOBILE);
-  const advantageItems = t('tech.advantages', { returnObjects: true }).map(
+  const advantageItems = t('tech.advantages.list', { returnObjects: true }).map(
     (item, index) => {
       const advantageKey = `advantage${index}`;
       return (
@@ -32,7 +32,7 @@ const Advantage: React.FC = () => {
     <ul className="section__list advantage__list">{advantageItems}</ul>
   );
 
-  const carouselItems = t('tech.advantages', { returnObjects: true }).map(
+  const carouselItems = t('tech.advantages.list', { returnObjects: true }).map(
     (item, index) => {
       const carouselKey = `carousel${index}`;
       return (
@@ -56,7 +56,7 @@ const Advantage: React.FC = () => {
   return (
     <div className="advantage">
       <h3 className="section__subtitle advantage__title">
-        Основные преимущества наших решений
+        {t('tech.advantages.title')}
       </h3>
       {isMobile ? carouselList : advantageList}
     </div>
