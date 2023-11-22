@@ -14,15 +14,16 @@ export const MOBILE_WIDTH = 320;
 export const PAD_WIDTH = 768;
 export const PAD_WIDTH_WITHOUT = PAD_WIDTH - 1;
 export const KEYBOARD_KEYS = { ESCAPE: "Escape" };
+
 export const MESSAGE_SUCCESS = {
-  title: "Спасибо!",
-  message: "Ваша заявка принята. Мы свяжемся с вами в ближайшее время.",
+  title: "feedback.messages.success.title",
+  message: "feedback.messages.success.text",
 };
 
 export const MESSAGE_ERROR = {
-  title: "Oшибка!",
+  title: "feedback.messages.error.title",
   message:
-    "К сожалению Ваша заявка не отправлена. Пожалуйста, проверьте поля формы отбратной связи и попробуйте позже.",
+    "feedback.messages.error.text",
 };
 
 export const SPACE_KEY = " ";

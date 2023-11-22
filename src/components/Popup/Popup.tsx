@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { KEYBOARD_KEYS } from '../../utils/constants';
 import './Popup.scss';
+import { useTranslation } from 'react-i18next';
 
 type TProps = {
   title?: string;
@@ -10,6 +11,7 @@ type TProps = {
 };
 
 const Popup: React.FC<TProps> = ({ closePopup, title, message, component }) => {
+  const { t } = useTranslation();
   useEffect(() => {
     const handleEscPress = (event: KeyboardEvent) => {
       if (event.key === KEYBOARD_KEYS.ESCAPE) {
@@ -40,8 +42,8 @@ const Popup: React.FC<TProps> = ({ closePopup, title, message, component }) => {
           type="button"
           aria-label="Кнопка закрытия попапа"
         />
-        {title && <h3 className="popup__title">{title}</h3>}
-        {message && <p className="popup__message">{message}</p>}
+        {title && <h3 className="popup__title">{t(title as never)}</h3>}
+        {message && <p className="popup__message">{t(message as never)}</p>}
         {component && component}
       </div>
     </div>
