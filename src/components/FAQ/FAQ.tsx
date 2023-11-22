@@ -1,12 +1,13 @@
-import React from 'react';
-import './FAQ.scss';
-import FAQ_ITEMS from './constants';
+import React from "react";
+import "./FAQ.scss";
+import { useTranslation } from "react-i18next";
 
-const FAQ: React.FC = () => {
-  const faqItems = FAQ_ITEMS.map((item, index) => {
+const Faq: React.FC = () => {
+  const { t } = useTranslation();
+  const faqItems = t("faq.list", { returnObjects: true }).map((item, index) => {
     const itemKey = `item${index}`;
     return (
-      <details key={itemKey} open={item.isOpened} className="faq__details">
+      <details key={itemKey} className="faq__details">
         <summary className="faq__question">
           <span className="faq__question-icon" />
           <p className="faq__question-text">{item.questionText}</p>
@@ -21,12 +22,12 @@ const FAQ: React.FC = () => {
   return (
     <section className="section faq">
       <div className="section__wrapper">
-        <h2 className="section__title">F.A.Q</h2>
-        <h3 className="section__subtitle faq__subtitle">Частые вопросы</h3>
+        <h2 className="section__title">{t("faq.title")}</h2>
+        <h3 className="section__subtitle faq__subtitle">{t("faq.subtitle")}</h3>
         {faqListElement}
       </div>
     </section>
   );
 };
 
-export default FAQ;
+export default Faq;
