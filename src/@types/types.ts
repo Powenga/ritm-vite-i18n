@@ -5,3 +5,9 @@ export type TDataFeedback = {
   userMessage?: string;
   policy: boolean;
 };
+
+export type Langs = {
+  [key: string]: { nativeName: string };
+};
+
+

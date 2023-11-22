@@ -1,5 +1,5 @@
 import { BASE_URL_API_RITM, BASE_URL_TEST } from './constants';
-import { TDataFeedback } from '../types/types';
+import { TDataFeedback } from '../@types/types';
 
 const checkResponse = (res: Response) => {
   if (res.ok) {

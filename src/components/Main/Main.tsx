@@ -6,7 +6,7 @@ import Process from '../Process/Process';
 import Feedback from '../Feedback/Feedback';
 import FAQ from '../FAQ/FAQ';
 import Contacts from '../Contacts/Contacts';
-import { TDataFeedback } from '../../types/types';
+import { TDataFeedback } from '../../@types/types';
 
 type PropTypes = {
   onSubmitFeedback: (dataForm: TDataFeedback) => void;

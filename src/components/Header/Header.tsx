@@ -6,6 +6,7 @@ import "./Header.scss";
 import HeaderLine1 from "../../images/header-line1.svg?react";
 import HeaderLine2 from "../../images/header-line2.svg?react";
 import { Trans, useTranslation } from "react-i18next";
+import LangSwitcher from "../LangSwitcher/LangSwitcher";
 
 const Header: React.FC = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -46,6 +47,7 @@ const Header: React.FC = () => {
       <a href="#feedback" className="button header__button-link">
         {t("header.button")}
       </a>
+      <LangSwitcher />
       <h1 className="header__title">
         <Trans i18nKey="header.intro">
           <span className="header__title-span">

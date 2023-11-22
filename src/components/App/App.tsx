@@ -6,7 +6,7 @@ import Main from '../Main/Main';
 import Popup from '../Popup/Popup';
 import { sendForm } from '../../utils/ApiRitm';
 import { MESSAGE_ERROR, MESSAGE_SUCCESS } from '../../utils/constants';
-import { TDataFeedback } from '../../types/types';
+import { TDataFeedback } from '../../@types/types';
 import Policy from '../Policy/Policy';
 
 interface TPopupPropsState {

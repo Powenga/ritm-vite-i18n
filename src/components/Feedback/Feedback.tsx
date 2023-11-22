@@ -13,7 +13,7 @@ import {
   INPUT_NAME_ATTRIBUTES,
   InputNames
 } from './constants';
-import { TDataFeedback } from '../../types/types';
+import { TDataFeedback } from '../../@types/types';
 import { ENTER_KEY, SPACE_KEY } from '../../utils/constants';
 
 type PropTypes = {
