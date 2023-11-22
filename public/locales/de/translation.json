@@ -1,54 +1,57 @@
 {
   "header": {
-    "logoAlt": "Студия RITM",
+    "logoAlt": "Ritm studio",
     "nav": [
-      { "id": 0, "href": "#header", "text": "О компании" },
-      { "id": 1, "href": "#techs", "text": "Технологии" },
-      { "id": 2, "href": "#process", "text": "Процесс работы" },
-      { "id": 3, "href": "#contacts", "text": "Контакты" }
+      { "id": 0, "href": "#header", "text": "Company" },
+      { "id": 1, "href": "#techs", "text": "Techs" },
+      { "id": 2, "href": "#process", "text": "Process" },
+      { "id": 3, "href": "#contacts", "text": "Contacts" }
     ],
     "button": "Обсудить проект",
-    "intro": "<0>Разрабатываем и\u00A0внедряем веб\u00A0приложения</0>, которые помогают оптимизировать бизнес-процессы и\u00A0решить сложные управленческие задачи"
+    "intro": "<0>We develop and implement web-applications</0> to optimize business processes and solve complex management tasks"
   },
   "tech": {
-    "title": "Технологии",
-    "text": "Веб-приложение – это программный продукт, работающий в онлайн-среде и состоящий из\u00A0двух основных частей",
+    "title": "Technology",
+    "text": "A web-application is a software product that operates in an online environment and consists of two main parts",
     "items": [
       {
-        "title": "Клиентская часть",
-        "description": "Это интерфейс, через который пользователь управляет приложением. Самый простой и распространенный пример клиентской части веб-приложения – корпоративный сайт компании."
+        "title": "Front end",
+        "description": "It is an interface that allows the user to run the app. The simplest example of the web-application front end is the user account on the company’s website."
       },
       {
-        "title": "Серверная часть",
-        "description": "Это вычислительный и логический центр веб-приложения. Примером серверной части служит система управления заказами интернет-магазина."
+        "title": "Back end",
+        "description": "It is the computing and logical web-application center. The example of the back end is the hotel or airline reservation control system."
       }
     ],
-    "advantages": [
-      {
-        "imgSrc": "icon-box.svg",
-        "imgAlt": "Коробки",
-        "title": "Модульность",
-        "description": "веб-приложение состоит из независимых частей, разрабатываемых в зависимости от\u00A0текущих задач"
-      },
-      {
-        "imgSrc": "icon-browser.svg",
-        "imgAlt": "Браузер",
-        "title": "Масштабируемость",
-        "description": "технология веб-приложений позволяет вашей инфраструктуре расти вместе с компанией"
-      },
-      {
-        "imgSrc": "icon-devices.svg",
-        "imgAlt": "Устройства",
-        "title": "Кроссплатформенность",
-        "description": "веб-приложение работает на любом современном устройстве и доступно из\u00A0любой точки мира"
-      },
-      {
-        "imgSrc": "icon-internet.svg",
-        "imgAlt": "Интернет",
-        "title": "Универсальность",
-        "description": "веб-приложение позволяет интегрировать любое устройство с выходом в сеть в\u00A0экосистему компании"
-      }
-    ]
+    "advantages": {
+      "title": "Main benefits of our solutions",
+      "list": [
+        {
+          "imgSrc": "icon-box.svg",
+          "imgAlt": "Коробки",
+          "title": "Модульность",
+          "description": "веб-приложение состоит из независимых частей, разрабатываемых в зависимости от\u00A0текущих задач"
+        },
+        {
+          "imgSrc": "icon-browser.svg",
+          "imgAlt": "Браузер",
+          "title": "Масштабируемость",
+          "description": "технология веб-приложений позволяет вашей инфраструктуре расти вместе с компанией"
+        },
+        {
+          "imgSrc": "icon-devices.svg",
+          "imgAlt": "Устройства",
+          "title": "Кроссплатформенность",
+          "description": "веб-приложение работает на любом современном устройстве и доступно из\u00A0любой точки мира"
+        },
+        {
+          "imgSrc": "icon-internet.svg",
+          "imgAlt": "Интернет",
+          "title": "Универсальность",
+          "description": "веб-приложение позволяет интегрировать любое устройство с выходом в сеть в\u00A0экосистему компании"
+        }
+      ]
+    }
   },
   "dev": {
     "title": "Пример развития экосистемы",
