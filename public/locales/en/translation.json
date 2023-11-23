@@ -8,7 +8,7 @@
       { "id": 3, "href": "#contacts", "text": "Contacts" }
     ],
     "button": "Обсудить проект",
-    "intro": "<0>We develop and implement web-applications</0> to optimize business processes and solve complex management tasks"
+    "intro": "<0>We develop and implement web\u2011applications</0> to optimize business processes and solve complex management tasks"
   },
   "tech": {
     "title": "Technology",
@@ -34,115 +34,115 @@
         },
         {
           "imgSrc": "icon-browser.svg",
-          "imgAlt": "Браузер",
-          "title": "Масштабируемость",
-          "description": "технология веб-приложений позволяет вашей инфраструктуре расти вместе с компанией"
+          "imgAlt": "Browser",
+          "title": "Scalability",
+          "description": "the web\u2011application technology allows your infrastructure to expand while your business is growing"
         },
         {
           "imgSrc": "icon-devices.svg",
-          "imgAlt": "Устройства",
-          "title": "Кроссплатформенность",
-          "description": "веб-приложение работает на любом современном устройстве и доступно из\u00A0любой точки мира"
+          "imgAlt": "Devices",
+          "title": "Cross\u2011platform operation",
+          "description": "a web-application makes it possible to integrate any device connected to Internet into the company's ecosystem"
         },
         {
           "imgSrc": "icon-internet.svg",
-          "imgAlt": "Интернет",
-          "title": "Универсальность",
-          "description": "веб-приложение позволяет интегрировать любое устройство с выходом в сеть в\u00A0экосистему компании"
+          "imgAlt": "Internet",
+          "title": "Versatility",
+          "description": "Web\u2011applications run on any state-of-the-art devices and are accessible from anywhere globally"
         }
       ]
     }
   },
   "dev": {
-    "title": "Пример развития экосистемы",
+    "title": "Ecosystem development example",
     "stages": {
-      "title": "Интеграция IT-решений в\u00A0ваш\u00A0бизнес",
+      "title": "Development of IT solutions for\u00A0your business",
       "list": [
         {
-          "title": "Первый этап",
+          "title": "Step one",
           "descriptions": [
-            "Ваша компания только начинает свой путь развития. Вам\u00A0необходим простой сайт-визитка или одностраничный лэндинг для продвижения продукта.",
-            "С помощью технологии веб-приложения мы разрабатываем быстрый сайт с современным адаптивным дизайном."
+            "Your company has an outdated corporate website. We develop a state-of-the-art fast modular corporate website with a new design and all required features using the web-applications technology.",
+            "Now your customers can comfortably exploit their account, and your employees improve their customer relations procedures."
           ],
           "imgClass": "stages__item-image_type_first",
           "imgSrc": "image-step1.svg",
-          "imgAlt": "Картинка устройств"
+          "imgAlt": "#"
         },
         {
-          "title": "Второй этап",
+          "title": "Step two",
           "descriptions": [
-            "Ваши бизнес-процессы становятся все сложнее и требуют новых функциональных возможностей. Мы\u00A0добавляем на сайт каталог товаров с системой уведомления менеджеров.",
-            "Оба блока работают в единой экосистеме и не\u00A0конфликтуют между собой."
+            "Your business is growing, new branches appear in different cities and countries. Your business processes are becoming more complicated, requiring constant monitoring by managers and owners. We implement a unified-standard electronic document management system and connect it to the corporate website.",
+            "Now no inquiry is left unnoticed, and all of them are assigned to responsible employees. The customers can receive all services in one place based on a one-stop shop principle."
           ],
           "imgClass": "stages__item-image_type_second",
           "imgSrc": "image-step2.svg",
-          "imgAlt": "Картинка устройств"
+          "imgAlt": "#"
         },
         {
-          "title": "Третий этап",
+          "title": "Stage three",
           "descriptions": [
-            "Вы решаете сделать шаг в сторону полноценного e-commerce и запустить интернет-магазин. Мы\u00A0разрабатываем систему приема платежей, авторизацию и гео-треккинг.",
-            "Все разделы вашего корпоративного портала работают вместе над реализацией единой задачи."
+            "Your business model proves to be highly effective, but every company has certain growth points. You consider an increase in business processes efficiency and a decrease in costs. We implement a corporate tangible assets management system.",
+            "Now you are able to review the efficiency of basic production assets and money resources utilization on a daily basis. Cutting-edge technology saves your money."
           ],
           "imgClass": "stages__item-image_type_third",
           "imgSrc": "image-step3.svg",
-          "imgAlt": "Картинка корзины"
+          "imgAlt": "#"
         },
         {
-          "title": "Четвертый этап",
+          "title": "Stage four",
           "descriptions": [
-            "Ваша компания внедряет системы учета, CRM-модули, контроль эффективности менеджеров и продвинутая бизнес-аналитика. Вам требуется создание своей бизнес-экосистемы.",
-            "Мы продолжаем процесс разработки и создаём уникальный продукт, связывающий все ресурсы компании."
+            "You upgrade your business so as to fully integrate offline and online environments. We unite your equipment, vehicles, and employee's work stations into a common digital space",
+            "Thus, you are able to get as much business information as possible in real time."
           ],
           "imgClass": "stages__item-image_type_fourth",
           "imgSrc": "image-step4.svg",
-          "imgAlt": "Картинка отчетов"
+          "imgAlt": "#"
         }
       ]
     },
     "business": {
-      "title": "Основные преимущества для\u00A0вашего\u00A0бизнеса",
+      "title": "Main benefits for\u00A0your business",
       "list": [
         {
-          "description": "Мы специализируется на сложных решениях, связанных с глубокой аналитикой бизнес-процессов. Совместно с вами мы изучим ваш бизнес и\u00A0предложим наиболее оптимальное и эффективное решение."
+          "description": "We specialize in complex solutions as related to business processes advanced analytics. Together with you, we will study your business and propose the most optimal and effective solutions."
         },
         {
-          "description": "Наша стратегия построена на долгосрочных партнерских отношениях. Если\u00A0сейчас у вас нет сложных задач и вам требуется только простой сайт-визитка с обратной связью, мы с удовольствием поможем вам."
+          "description": "Our strategy is based on a long-term partnership. We support our products throughout their life cycle."
         },
         {
-          "description": "На каждом этапе развития вашей компании мы поможем вам развивать собственную IT-экосистему актуальную для ваших текущих задач и\u00A0использующую самый современный стек технологий."
+          "description": "We help you to develop your own IT-ecosystem that perfectly fits your needs on each stage of your business growth and utilizes the top-of-the-line technology stack."
         }
       ]
     }
   },
   "process": {
-    "title": "Процесс работы",
+    "title": "Workflow",
     "steps": {
-      "title": "Взаимодействие с\u00A0нами\u00A0состоит из\u00A0следующих шагов",
+      "title": "Cooperation stages",
       "list": [
         {
-          "title": "Постановка задачи",
-          "description": "Обсуждаем с вами ваш бизнес-процесс и задачу. Общаемся и\u00A0узнаем потребности."
+          "title": "Goal setting",
+          "description": "We discuss your business process and goal. We get to know you and your needs."
         },
         {
-          "title": "Техническое задание",
-          "description": "Интерпретируем вашу потребность в\u00A0техническое задание, выбираем стек технологий."
+          "title": "Terms of reference",
+          "description": "We interpret your need into the terms of reference and choose the technology stack."
         },
         {
-          "title": "Коммерческое предложение",
-          "description": "Обсуждаем и корректируем элементы будущего решения, формируем коммерческое предложение."
+          "title": "Quote",
+          "description": "We discuss and correct solution elements and generate the quote."
         },
         {
-          "title": "Заключение договора",
-          "description": "Ведём переговоры о сумме и сроках выполнения работ. Заключаем договор и начинаем сотрудничество."
+          "title": "Agreement",
+          "description": "We negotiate the payment and terms. We sign the agreement and start our cooperation."
         },
         {
-          "title": "Запуск продукта",
-          "description": "Завершаем работы и демонстрируем финальный результат, запускаем ваш новый продукт."
+          "title": "Product launch",
+          "description": "We complete works and demonstrate the final result, we launch your new product."
         },
         {
-          "title": "Поддержка продукта",
-          "description": "Обучаем ваших сотрудников и\u00A0поддерживаем работу в течение всей\u00A0жизни экосистемы."
+          "title": "Product support",
+          "description": "We train your employees and support the product throughout the whole term of its use."
         }
       ]
     }
@@ -205,10 +205,10 @@
     ]
   },
   "contacts": {
-    "title": "Контакты",
-    "subtitle": "Как с нами связаться",
+    "title": "Contacts",
+    "subtitle": "Get in touch",
     "person": {
-      "name": "Контактное лицо: Вадим\u00A0Бакуров, CEO",
+      "name": "Contact person: Vadim\u00A0Bakurov, CEO",
       "phone": {
         "number": "+79623500014",
         "placeholder": "+7 (962) 350-00-14"
