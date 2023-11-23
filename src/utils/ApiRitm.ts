@@ -1,4 +1,4 @@
-import { BASE_URL_API_RITM, BASE_URL_TEST } from './constants';
+import { BASE_URL_API_RITM } from './constants';
 import { TDataFeedback } from '../@types/types';
 
 const checkResponse = (res: Response) => {
@@ -6,21 +6,9 @@ const checkResponse = (res: Response) => {
     return res.json();
   }
 
-  return res.json().then((err) => {
-    const error = err;
-    error.statusCode = res.status;
-    return Promise.reject(error);
-  });
-};
-
-export const getTest = async () => {
-  try {
-    const res = await fetch(BASE_URL_TEST);
-    const data = await checkResponse(res);
-    return data;
-  } catch (error) {
-    return Promise.reject(error);
-  }
+  const error: Error & { statusCode?: number } = new Error();
+  error.statusCode = res.status;
+  return Promise.reject(error);
 };
 
 export const sendForm = async ({
@@ -28,25 +16,24 @@ export const sendForm = async ({
   userPhone,
   userEmail,
   userMessage = '',
-  policy
+  policy,
 }: TDataFeedback) => {
   try {
     const res = await fetch(`${BASE_URL_API_RITM}`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         userName,
         userPhone,
         userEmail,
         userMessage,
-        policy
-      })
+        policy,
+      }),
     });
-    const data = await checkResponse(res);
-    return data;
+    await checkResponse(res);
   } catch (error) {
     return Promise.reject(error);
   }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
-
 import './Carousel.scss';
 
 type Props = {
@@ -47,7 +46,7 @@ const Carousel: React.FC<Props> = ({ children }) => {
 
   const handlers = useSwipeable({
     onSwipedLeft: () => updateIndex(activeIndex + 1),
-    onSwipedRight: () => updateIndex(activeIndex - 1)
+    onSwipedRight: () => updateIndex(activeIndex - 1),
   });
 
   return (
@@ -57,16 +56,21 @@ const Carousel: React.FC<Props> = ({ children }) => {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="carousel__inner" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
+      <div
+        className="carousel__inner"
+        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+      >
         {children}
       </div>
       <div className="carousel__indicators">
-        {React.Children.map(children, (child, index) => {
+        {React.Children.map(children, (_child, index) => {
           return (
             <button
               type="button"
               className={`carousel__indicators-button${
-                index === activeIndex ? ' carousel__indicators-button_active' : ''
+                index === activeIndex
+                  ? ' carousel__indicators-button_active'
+                  : ''
               }`}
               onClick={() => {
                 updateIndex(index);

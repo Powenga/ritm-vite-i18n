@@ -25,7 +25,7 @@ const Popup: React.FC<TProps> = ({ closePopup, title, message, component }) => {
   }, [closePopup]);
 
   const handleOverlayClose = (evt: React.MouseEvent | React.KeyboardEvent) => {
-    return evt.target === evt.currentTarget && closePopup();
+    evt.target === evt.currentTarget && closePopup();
   };
 
   return (

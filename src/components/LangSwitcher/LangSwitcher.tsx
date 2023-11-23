@@ -22,11 +22,11 @@ const LangSwitcher: FC = () => {
           {Object.keys(langs)
             .filter((lang) => lang !== resolvedLanguage)
             .map((lang) => (
-              <li>
+              <li key={lang}>
                 <button
                   type="button"
-                  onClick={() => {
-                    i18n.changeLanguage(lang);
+                  onClick={async () => {
+                    await i18n.changeLanguage(lang);
                     setIsOpen(false);
                   }}
                   lang="en"

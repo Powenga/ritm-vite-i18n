@@ -42,7 +42,7 @@ function App() {
         message: MESSAGE_SUCCESS.message,
       });
       openPopup();
-    } catch (e) {
+    } catch (er) {
       setPopupProps({
         title: MESSAGE_ERROR.title,
         message: MESSAGE_ERROR.message,
