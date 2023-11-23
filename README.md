@@ -1,0 +1,1 @@
+# ritm-vite-i18n
